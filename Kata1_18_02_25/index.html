@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <form id="taskForm">
+        <input type="text" id="task" placeholder="Enter Task" required autocomplete="off">
+        <input type="text" id="description" placeholder="Enter Description" required autocomplete="off">
+        <input type="date" id="deadlineDate">
+        <input type="time" id="deadlineTime">
+        <select id="priority">
+            <option value="high">High</option>
+            <option value="moderate">Moderate</option>
+            <option value="low">Low</option>
+        </select>
+        <button type="submit">Add Task</button>
+    </form>
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>Task (Priority)</th>
+                <th>Description</th>
+                <th>Time Left</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

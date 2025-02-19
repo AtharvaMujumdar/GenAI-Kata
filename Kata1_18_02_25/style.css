@@ -1,0 +1,56 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f7f7f7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.priority-high {
+    color: white;
+    background-color: red;
+}
+
+.priority-moderate {
+    color: black;
+    background-color: rgb(20, 219, 186);
+}
+
+.priority-low {
+    color: black;
+    background-color: orange;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.countdown {
+    font-weight: bold;
+}
