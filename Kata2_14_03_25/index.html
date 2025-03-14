@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Problem-Solving Application</h2>
+
+
+         <!-- Step 1: Problem Type Selection -->
+        <label class="block font-medium">Select Category:</label>
+        <select id="category" class="mt-2 p-2 border rounded w-full" onchange="loadTopics()">
+            <option value="">--Select--</option>
+            <option value="data_structures">Data Structures</option>
+            <option value="algorithms">Algorithms</option>
+        </select>
+
+
+          <!-- Step 2: Submenu for Topics -->
+        <div id="topicSection" class="mt-4 hidden">
+            <label class="block font-medium">Select Topic:</label>
+            <select id="topics" class="mt-2 p-2 border rounded w-full" onchange="showDifficulty()"></select>
+        </div>
+
+
+       <!-- Step 3: Difficulty Level -->
+        <div id="difficultySection" class="mt-4 hidden">
+            <label class="block font-medium">Select Difficulty:</label>
+            <select id="difficulty" class="mt-2 p-2 border rounded w-full">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+
+       
+        <button id="generateBtn" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hidden" onclick="generateQuestion()">Generate Question</button>
+
+
+        <!-- Step 4: Generated Question -->
+        <div id="questionSection" class="mt-6 hidden">
+            <h3 class="text-lg font-semibold">Generated Question:</h3>
+            <p id="questionText" class="mt-2 p-3 bg-gray-200 rounded"></p>
+        </div>
+
+
+        <!-- Step 5: Solution Submission -->
+        <textarea id="solutionInput" class="mt-4 p-2 border rounded w-full h-40 hidden" placeholder="Enter your solution..."></textarea>
+        <button id="submitBtn" class="mt-4 bg-green-500 text-white px-4 py-2 rounded hidden" onclick="submitSolution()">Submit Solution</button>
+
+
+        <!-- Step 6: AI Feedback -->
+        <div id="feedbackSection" class="mt-6 hidden">
+            <h3 class="text-lg font-semibold">Feedback:</h3>
+            <p id="feedbackText" class="mt-2 p-3 bg-gray-200 rounded"></p>
+            <h3 class="text-lg font-semibold mt-4">Grade:</h3>
+            <p id="gradeText" class="mt-2 p-3 bg-gray-200 rounded"></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
